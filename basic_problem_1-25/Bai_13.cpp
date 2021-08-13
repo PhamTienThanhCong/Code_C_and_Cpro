@@ -74,7 +74,7 @@ int main(){
             }
             if (a[i]=='B'){
                 y++;
-                tt=4;
+                tt=1;
             }
             if (a[i]=='L'){
                 x++;
@@ -85,7 +85,7 @@ int main(){
                 tt=3;
             }
         }
-        cout<<a[i]<<' '<<x<<' '<<y<<' '<<tt<<endl;
+        //cout<<a[i]<<' '<<x<<' '<<y<<' '<<tt<<endl;
     }
     cout<<x<<' '<<y;
 }
