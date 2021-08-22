@@ -3,11 +3,11 @@
 using namespace std;
 
 bool SNT(int a){
-    if (a<4){
-        return true;
-    }
     if (a==1){
         return false;
+    }
+    if (a<4){
+        return true;
     }
     for (int i=2;i<=int(sqrt(a));i++){
         if (a%i==0){
