@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1610120722 source:d:\khoa_hoc_may_tinh\code\bai2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

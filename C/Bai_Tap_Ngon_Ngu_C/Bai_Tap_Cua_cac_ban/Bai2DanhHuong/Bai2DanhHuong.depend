@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1606659353 source:d:\khoa_hoc_may_tinh\code\bai2danhhuong\main.c
+	<stdio.h>
+	<ctype.h>
+

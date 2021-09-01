@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1608477200 source:d:\khoa_hoc_may_tinh\code\bai_tap_cua_cac_ban\hieu3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

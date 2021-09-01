@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1606553573 source:d:\khoa_hoc_may_tinh\code\sequense\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+

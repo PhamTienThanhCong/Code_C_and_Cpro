@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1607336769 source:d:\khoa_hoc_may_tinh\code\test\main.c
+	<stdio.h>
+
+1608563162 source:d:\khoa_hoc_may_tinh\code\vd_khac\test\main.c
+	<stdio.h>
+	<math.h>
+

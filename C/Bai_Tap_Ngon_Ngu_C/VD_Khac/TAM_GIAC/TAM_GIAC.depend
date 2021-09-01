@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1604678298 source:d:\khoa_hoc_may_tinh\code\tam_giac\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+

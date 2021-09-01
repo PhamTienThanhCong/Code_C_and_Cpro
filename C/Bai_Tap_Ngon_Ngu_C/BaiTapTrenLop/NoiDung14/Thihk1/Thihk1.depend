@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1611546429 source:d:\khoa_hoc_may_tinh\code\baitaptrenlop\noidung14\thihk1\main.c
+	<conio.h>
+	<stdio.h>
+	<string.h>
+

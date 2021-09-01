@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1607885722 source:d:\khoa_hoc_may_tinh\code\baitaptrenlop\noidung9\tichphan\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1608054468 source:d:\khoa_hoc_may_tinh\code\vd_khac\tichphan\main.c
+	<stdio.h>
+
