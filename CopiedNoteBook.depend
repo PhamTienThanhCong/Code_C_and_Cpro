@@ -1,0 +1,94 @@
+# depslib dependency file v1.0
+1604150978 source:d:\code\thanhpham_workspace\copiednotebook\main.cpp
+	"CopiedNoteBook.h"
+
+1604153524 d:\code\thanhpham_workspace\copiednotebook\include\copiednotebook.h
+	"CopyingListener.h"
+	"NotebookWriting.h"
+	"../interface/IOnCopyingListener.h"
+	<string>
+
+1604154433 source:d:\code\thanhpham_workspace\copiednotebook\src\copiednotebook.cpp
+	"CopiedNoteBook.h"
+
+1604154603 d:\code\thanhpham_workspace\copiednotebook\include\copyinglistener.h
+	"../interface/IOnCopyingListener.h"
+	<windows.h>
+	<string>
+
+1604154305 d:\code\thanhpham_workspace\copiednotebook\include\notebookwriting.h
+	<string>
+
+1604155036 source:d:\code\thanhpham_workspace\copiednotebook\src\copyinglistener.cpp
+	"CopyingListener.h"
+	<iostream>
+
+1604154934 source:d:\code\thanhpham_workspace\copiednotebook\src\notebookwriting.cpp
+	"NotebookWriting.h"
+	<iostream>
+
+1604153301 d:\code\thanhpham_workspace\copiednotebook\interface\ioncopyinglistener.h
+	<string>
+
+1604150978 source:d:\khoa_hoc_may_tinh\code\thanhpham_workspace\copiednotebook\main.cpp
+	"CopiedNoteBook.h"
+
+1604153524 d:\khoa_hoc_may_tinh\code\thanhpham_workspace\copiednotebook\include\copiednotebook.h
+	"CopyingListener.h"
+	"NotebookWriting.h"
+	"../interface/IOnCopyingListener.h"
+	<string>
+
+1604154603 d:\khoa_hoc_may_tinh\code\thanhpham_workspace\copiednotebook\include\copyinglistener.h
+	"../interface/IOnCopyingListener.h"
+	<windows.h>
+	<string>
+
+1604153301 d:\khoa_hoc_may_tinh\code\thanhpham_workspace\copiednotebook\interface\ioncopyinglistener.h
+	<string>
+
+1604154305 d:\khoa_hoc_may_tinh\code\thanhpham_workspace\copiednotebook\include\notebookwriting.h
+	<string>
+
+1604154433 source:d:\khoa_hoc_may_tinh\code\thanhpham_workspace\copiednotebook\src\copiednotebook.cpp
+	"CopiedNoteBook.h"
+
+1604155036 source:d:\khoa_hoc_may_tinh\code\thanhpham_workspace\copiednotebook\src\copyinglistener.cpp
+	"CopyingListener.h"
+	<iostream>
+
+1604154934 source:d:\khoa_hoc_may_tinh\code\thanhpham_workspace\copiednotebook\src\notebookwriting.cpp
+	"NotebookWriting.h"
+	<iostream>
+
+1604150978 source:d:\khoa_hoc_may_tinh\code\du_an\thanhpham_workspace\copiednotebook\main.cpp
+	"CopiedNoteBook.h"
+
+1604153524 d:\khoa_hoc_may_tinh\code\du_an\thanhpham_workspace\copiednotebook\include\copiednotebook.h
+	"CopyingListener.h"
+	"NotebookWriting.h"
+	"../interface/IOnCopyingListener.h"
+	<string>
+
+1604154603 d:\khoa_hoc_may_tinh\code\du_an\thanhpham_workspace\copiednotebook\include\copyinglistener.h
+	"../interface/IOnCopyingListener.h"
+	<windows.h>
+	<string>
+
+1604153301 d:\khoa_hoc_may_tinh\code\du_an\thanhpham_workspace\copiednotebook\interface\ioncopyinglistener.h
+	<string>
+
+1604154305 d:\khoa_hoc_may_tinh\code\du_an\thanhpham_workspace\copiednotebook\include\notebookwriting.h
+	<string>
+
+1604154433 source:d:\khoa_hoc_may_tinh\code\du_an\thanhpham_workspace\copiednotebook\src\copiednotebook.cpp
+	"CopiedNoteBook.h"
+
+1604155036 source:d:\khoa_hoc_may_tinh\code\du_an\thanhpham_workspace\copiednotebook\src\copyinglistener.cpp
+	"CopyingListener.h"
+	<iostream>
+
+1604154934 source:d:\khoa_hoc_may_tinh\code\du_an\thanhpham_workspace\copiednotebook\src\notebookwriting.cpp
+	"NotebookWriting.h"
+	<iostream>
+
