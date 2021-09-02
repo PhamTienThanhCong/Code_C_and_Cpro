@@ -17,5 +17,5 @@ long int Dem(long int a){
 
 int main(){
     cin>>lf>>rt;
-    cout<<Dem(rt)-Dem(lf);
+    cout<<Dem(rt)-Dem(lf-1);
 }
