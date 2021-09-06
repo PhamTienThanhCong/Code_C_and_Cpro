@@ -11,16 +11,18 @@ typedef struct _listnode {
 
 void printList(ListNode *head){
     ListNode *cur=head;
-    if (cur==NULL){
+    if (cur ==NULL){
         printf("\nDanh sach lien ket khong co phan tu nao");
     }else{
         while (cur!=NULL)
         {
-            printf("\n %d",cur.num);
-            cur=cur.next;
+            printf("\n %d",cur->num);
+            cur=cur->next;
         }
+        
     }
 }
+
 
 //phần 1
 int main(){
