@@ -38,22 +38,22 @@ ListNode *findNode(ListNode *head, int i) {
     return cur;
 }
 
-// //phần 4
-// void insertNode(ListNode **pHead, int index, int value){
-//     ListNode *cur, *newNode;
-//     if (*pHead == ___ || index == ___ ){
-//         newNode = malloc(sizeof(ListNode));
-//         newNode->num = value;
-//         newNode->next = ___ ;
-//         *pHead = ___ ;
-//     }
-//     else if ((cur = findNode( ___, ___ )) != NULL){
-//         newNode = malloc(sizeof(ListNode));
-//         newNode->num = value;
-//         newNode->next = ___ ;
-//         cur->next =___ ;
-//     } else printf("can not insert the new item at index %d!\n", index);
-// }
+//phần 4
+void insertNode(ListNode **pHead, int index, int value){ 
+	 ListNode *cur, *newNode; 
+	 if (*pHead == NULL || index == 0 ){ 
+	 	newNode = malloc(sizeof(ListNode)); 
+	 	newNode->num = value; 
+	 	newNode->next = *pHead ; 
+	 	*pHead = newNode ; 
+	 } 
+	 else if ((cur = findNode(*pHead , index-1 )) != NULL){ 
+	 	newNode = malloc(sizeof(ListNode)); 
+	 	newNode->num = value; 
+	 	newNode->next = cur->next ; 
+	 	cur->next = newNode ; 
+	} else printf("can not insert the new item at index %d!\n", index); 
+}
 
 // //phần 5
 // void removeNode(ListNode **ptrHead, int index){
@@ -72,17 +72,16 @@ ListNode *findNode(ListNode *head, int i) {
 
 int main(){
     //phần 1
-    ListNode *node0, *node1, *head, *head2;
+    ListNode *node0, *node1, *head;
 	node0 = malloc(sizeof(ListNode)); 
 	node1 = malloc(sizeof(ListNode)); 
 	node0->num = 20; 
 	node1->num = 30; 
-	// printList(head);
 	node0->next = node1 ; 
 	node1->next = NULL ; 
 	head = node0 ;
 	// printList(head);
-    head2 = findNode(head,1);
-    // head2->next = NULL;
-    printList(head2);
+    //printf("%d",findNode(head,0)->num);
+    // insertNode(&head,1,10);
+    // printList(head);
 }
