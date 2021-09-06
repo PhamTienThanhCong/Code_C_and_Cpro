@@ -55,20 +55,20 @@ void insertNode(ListNode **pHead, int index, int value){
 	} else printf("can not insert the new item at index %d!\n", index); 
 }
 
-// //phần 5
-// void removeNode(ListNode **ptrHead, int index){
-//     ListNode *cur, *pre;
-//     if (index == ___ ) {
-//         cur = ___ ;
-//         *ptrHead = ___;
-//         free(cur);
-//     } else {
-//         pre = findNode( ___ , ___);
-//         cur = ___ ;
-//         pre->next = ___ ;
-//         free(cur);
-//     }
-// }
+//phần 5
+void removeNode(ListNode **ptrHead, int index){ 
+	ListNode *cur, *pre; 
+	if (index == 0 ) { 
+	 	cur = *ptrHead ; 
+	 	*ptrHead = cur->next; 
+	 	free(cur); 
+	} else { 
+	 	pre = findNode( *ptrHead , index); 
+	 	cur = pre->next ; 
+	 	pre->next = cur->next ; 
+	 	free(cur); 
+	} 
+}   
 
 int main(){
     //phần 1
@@ -80,8 +80,15 @@ int main(){
 	node0->next = node1 ; 
 	node1->next = NULL ; 
 	head = node0 ;
-	// printList(head);
-    //printf("%d",findNode(head,0)->num);
-    // insertNode(&head,1,10);
-    // printList(head);
+    printf("Phan 1:\n");
+	printList(head);
+    printf("Phan 2:\n");
+    printf("%d",findNode(head,1)->num);
+    printf("\nPhan 3:\n");
+    insertNode(&head,1,10);
+    printList(head);
+    printf("Phan 4:\n");
+    removeNode(&head,0);
+    printList(head);
+    
 }
