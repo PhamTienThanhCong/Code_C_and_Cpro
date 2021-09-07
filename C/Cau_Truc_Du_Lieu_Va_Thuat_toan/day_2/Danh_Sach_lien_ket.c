@@ -63,7 +63,7 @@ void removeNode(ListNode **ptrHead, int index){
 	 	*ptrHead = cur->next; 
 	 	free(cur); 
 	} else { 
-	 	pre = findNode( *ptrHead , index); 
+	 	pre = findNode( *ptrHead , index-1); 
 	 	cur = pre->next ; 
 	 	pre->next = cur->next ; 
 	 	free(cur); 
@@ -85,10 +85,10 @@ int main(){
     printf("Phan 2:\n");
     printf("%d",findNode(head,1)->num);
     printf("\nPhan 3:\n");
-    insertNode(&head,1,10);
+    insertNode(&head,0,10);
     printList(head);
     printf("Phan 4:\n");
-    removeNode(&head,0);
+    removeNode(&head,1);
     printList(head);
     
 }
