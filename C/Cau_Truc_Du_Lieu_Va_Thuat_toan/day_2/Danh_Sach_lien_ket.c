@@ -83,7 +83,9 @@ int main(){
     printf("Phan 1:\n");
 	printList(head);
     printf("Phan 2:\n");
-    printf("%d",findNode(head,1)->num);
+    if (findNode(head,1)){
+        printf("%d",findNode(head,1)->num);
+    }
     printf("\nPhan 3:\n");
     insertNode(&head,0,10);
     printList(head);
