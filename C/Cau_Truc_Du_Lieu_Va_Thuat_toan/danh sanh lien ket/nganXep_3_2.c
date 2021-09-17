@@ -4,8 +4,11 @@
 
 void sort(Stack *s){
     if (isEmptyStack(s)!=0){
-        int get_int=pop(s);
-        insertNode(&s)
+        int get_in,size=s->ll.size;
+        for (int i=1;i<=size;i++){
+            get_in = pop(s);
+            insertNode(&s->ll.head,s->ll.size,get_in);
+        }
     }
     else 
         printf("ham rong");
