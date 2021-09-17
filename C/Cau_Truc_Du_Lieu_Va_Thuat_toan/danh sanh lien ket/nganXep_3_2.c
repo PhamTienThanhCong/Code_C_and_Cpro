@@ -9,6 +9,7 @@ void sort(Stack *s){
             get_in = pop(s);
             insertNode(&s->ll.head,s->ll.size,get_in);
         }
+        s->ll.size=size;
     }
     else 
         printf("ham rong");
