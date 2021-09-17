@@ -1,1 +1,0 @@
-insertNode(&s,s->ll.size,pop(s));
