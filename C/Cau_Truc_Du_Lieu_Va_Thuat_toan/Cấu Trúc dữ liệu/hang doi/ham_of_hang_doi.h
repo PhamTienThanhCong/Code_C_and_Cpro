@@ -127,11 +127,3 @@ int isEmptyQueue(Queue *q){
 		return 1;
 	return 0;
 }
-int main(){
-	Queue *q = malloc(sizeof(Queue) ); 
- 	q->ll.size = 0 ; 
- 	q->ll.head= NULL ;
- 	printList(q->ll.head);
- 	
-} 
-

@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-//Cấp dữ liệu
 typedef struct _listnode
 {
     int num;
@@ -19,13 +17,6 @@ typedef struct _stack
 {
     LinkedList ll;
 } Stack;
-
-typedef struct _queue
-{
-    LinkedList ll;
-} Queue;
-
-//Hàm 
 
 void printList(ListNode *head)
 {
@@ -163,36 +154,4 @@ void sort(Stack *s){
     }
     else 
         printf("ham rong");
-}
-
-//hangdoi
-void enqueue(Queue *q, int item) { 
- 	insertNode( &(q->ll.head) , q->ll.size, item); 
- 	q->ll.size = q->ll.size + 1 ; 
-} 
-int dequeue(Queue *q) { 
-	int item; 
-	if (q->ll.head != NULL) { 
-	 	item = (q->ll.head) -> num ; 
-	 	removeNode( &(q->ll.head), 0 ); 
-	 	(q->ll).size = (q->ll).size - 1 ; 
-	 	return item; 
-	} 
-	else { 
-		printf("Hang doi rong"); 
-		return 0; 
-	} 
-}
-int peek(Queue *q){ 
- 	if (q->ll.head != NULL) 
- 		return (q->ll.head) -> num ; 
- 	else { 
-		printf("Hang doi rong"); 
-		return 0; 
-	} 
-} 
-int isEmptyQueue(Queue *q){ 
-	if((q->ll).size == 0)
-		return 1;
-	return 0;
 }
