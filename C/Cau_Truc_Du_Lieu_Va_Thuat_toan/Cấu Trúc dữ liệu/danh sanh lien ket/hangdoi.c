@@ -1,8 +1,6 @@
-#include <stdio.h>
+	#include <stdio.h>
 #include <stdlib.h>
 
-
-//Cấp dữ liệu
 typedef struct _listnode
 {
     int num;
@@ -15,17 +13,10 @@ typedef struct _linkedlist
     int size;
 } LinkedList;
 
-typedef struct _stack
-{
-    LinkedList ll;
-} Stack;
-
 typedef struct _queue
 {
     LinkedList ll;
 } Queue;
-
-//Hàm 
 
 void printList(ListNode *head)
 {
@@ -44,7 +35,7 @@ void printList(ListNode *head)
     }
 }
 
-//phần 3
+
 ListNode *findNode(ListNode *head, int i)
 {
     ListNode *cur = head;
@@ -66,7 +57,7 @@ ListNode *findNode(ListNode *head, int i)
     return cur;
 }
 
-//phần 4
+
 void insertNode(ListNode **pHead, int index, int value)
 {
     ListNode *cur, *newNode;
@@ -88,7 +79,7 @@ void insertNode(ListNode **pHead, int index, int value)
         printf("can not insert the new item at index %d!\n", index);
 }
 
-//phần 5
+
 void removeNode(ListNode **ptrHead, int index)
 {
     ListNode *cur, *pre;
@@ -106,66 +97,6 @@ void removeNode(ListNode **ptrHead, int index)
         free(cur);
     }
 }
-
-//hàm push
-void push(Stack *s, int item)
-{
-    insertNode(&(s->ll.head), s->ll.size, item);
-    s->ll.size = s->ll.size + 1;
-}
-
-int pop(Stack *s)
-{
-    int item;
-    if (isEmptyStack(s)!=0)
-    {
-        item = s->ll.head->num;
-        removeNode(&(s->ll.head), 0);
-        (s->ll).size = (s->ll).size - 1;
-        return item;
-    }
-    else
-    {
-
-        printf("Ngan xep rong");
-        return 0;
-    }
-}
-
-int peek(Stack *s)
-{
-    if (isEmptyStack(s)!=0)
-        return s->ll.head->num;
-    else
-    {
-
-        printf("Ngan xep rong");
-        return 0;
-    }
-}
-//bai8
-int isEmptyStack(Stack *s)
-{
-    if (s->ll.head != NULL)
-        return 1;
-    return 0;
-}
-
-//xắp xếp
-void sort(Stack *s){
-    if (isEmptyStack(s)!=0){
-        int get_in,size=s->ll.size;
-        for (int i=1;i<=size;i++){
-            get_in = pop(s);
-            insertNode(&s->ll.head,s->ll.size,get_in);
-        }
-        s->ll.size=size;
-    }
-    else 
-        printf("ham rong");
-}
-
-//hangdoi
 void enqueue(Queue *q, int item) { 
  	insertNode( &(q->ll.head) , q->ll.size, item); 
  	q->ll.size = q->ll.size + 1 ; 
@@ -196,3 +127,11 @@ int isEmptyQueue(Queue *q){
 		return 1;
 	return 0;
 }
+int main(){
+	Queue *q = malloc(sizeof(Queue) ); 
+ 	q->ll.size = 0 ; 
+ 	q->ll.head= NULL ;
+ 	printList(q->ll.head);
+ 	
+} 
+
