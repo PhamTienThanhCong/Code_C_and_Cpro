@@ -35,7 +35,6 @@ void printList(ListNode *head)
     }
 }
 
-
 ListNode *findNode(ListNode *head, int i)
 {
     ListNode *cur = head;
@@ -56,7 +55,6 @@ ListNode *findNode(ListNode *head, int i)
     }
     return cur;
 }
-
 
 void insertNode(ListNode **pHead, int index, int value)
 {
@@ -79,7 +77,6 @@ void insertNode(ListNode **pHead, int index, int value)
         printf("can not insert the new item at index %d!\n", index);
 }
 
-
 void removeNode(ListNode **ptrHead, int index)
 {
     ListNode *cur, *pre;
@@ -97,33 +94,40 @@ void removeNode(ListNode **ptrHead, int index)
         free(cur);
     }
 }
-void enqueue(Queue *q, int item) { 
- 	insertNode( &(q->ll.head) , q->ll.size, item); 
- 	q->ll.size = q->ll.size + 1 ; 
-} 
-int dequeue(Queue *q) { 
-	int item; 
-	if (q->ll.head != NULL) { 
-	 	item = (q->ll.head) -> num ; 
-	 	removeNode( &(q->ll.head), 0 ); 
-	 	(q->ll).size = (q->ll).size - 1 ; 
-	 	return item; 
-	} 
-	else { 
-		printf("Hang doi rong"); 
-		return 0; 
-	} 
+void enqueue(Queue *q, int item)
+{
+    insertNode(&(q->ll.head), q->ll.size, item);
+    q->ll.size = q->ll.size + 1;
 }
-int peek(Queue *q){ 
- 	if (q->ll.head != NULL) 
- 		return (q->ll.head) -> num ; 
- 	else { 
-		printf("Hang doi rong"); 
-		return 0; 
-	} 
-} 
-int isEmptyQueue(Queue *q){ 
-	if((q->ll).size == 0)
-		return 1;
-	return 0;
+int dequeue(Queue *q)
+{
+    int item;
+    if (q->ll.head != NULL)
+    {
+        item = (q->ll.head)->num;
+        removeNode(&(q->ll.head), 0);
+        (q->ll).size = (q->ll).size - 1;
+        return item;
+    }
+    else
+    {
+        printf("Hang doi rong");
+        return 0;
+    }
+}
+int peek(Queue *q)
+{
+    if (q->ll.head != NULL)
+        return (q->ll.head)->num;
+    else
+    {
+        printf("Hang doi rong");
+        return 0;
+    }
+}
+int isEmptyQueue(Queue *q)
+{
+    if ((q->ll).size == 0)
+        return 1;
+    return 0;
 }
