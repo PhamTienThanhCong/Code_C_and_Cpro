@@ -10,7 +10,9 @@ int main()
 	enqueue(q, 10);
 	enqueue(q, 20);
 	enqueue(q, 30);
-	// printList(q->ll.head);
-	//printf("%d",dequeue(q)); //in xong xóa
-	//printf("%d\n",peek(q));  // in xong không xóa
+	printList(q->ll.head);
+	printf("dequeue: %d\n",dequeue(q)); //in xong xóa
+	printList(q->ll.head);
+	printf("peek: %d\n",peek(q));  // in xong không xóa
+	printList(q->ll.head);
 }
