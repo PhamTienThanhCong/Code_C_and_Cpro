@@ -164,7 +164,7 @@ int main(){
 
     //reverse_queue(&q);
     // tranverse_queue(q);
-    sort_queue(&q,0);
+    //sort_queue(&q,0);
     //tranverse_queue(q);
-    tranverse_queue(q);
+    //tranverse_queue(q);
 }
