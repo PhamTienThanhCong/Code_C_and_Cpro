@@ -146,9 +146,9 @@ int main(){
     //scanf("%s",d);
     for(int i=0;i<strlen(d);i++)
         if (d[i]=='*')
-            dequeue(q);
+            printf("%c ",dequeue(q));
         else
             enqueue(q, d[i]);
     
-    printList(q);
+    //printList(q);
 }
