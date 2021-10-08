@@ -38,8 +38,8 @@ void insertionSort(int a[], int array_size)
             j = j - 1;
         }
         a[j] = last;
-        cout << endl;
-        for (int t = 0; t < 6; t++)
+        cout << endl<<"Lan "<<i<<": ";
+        for (int t = 0; t < array_size; t++)
         {
             cout << a[t] << ' ';
         }
@@ -67,13 +67,14 @@ void bubbleSort(int a[], int n)
 
 int main()
 {
-    int a[10] = {10, 9, 7, 4};
-    //selectionSort(a,4);
+    int a[10] = {10, 1,7,15,6,3,2,20};
+    int n=8;
     cout << "start: ";
-    for (int t = 0; t < 4; t++)
+    for (int t = 0; t < n; t++)
     {
         cout << a[t] << ' ';
     }
-    //insertionSort(a,6);
-    bubbleSort(a, 4);
+    //selectionSort(a,n);
+    //insertionSort(a,n);
+    bubbleSort(a, n);
 }
