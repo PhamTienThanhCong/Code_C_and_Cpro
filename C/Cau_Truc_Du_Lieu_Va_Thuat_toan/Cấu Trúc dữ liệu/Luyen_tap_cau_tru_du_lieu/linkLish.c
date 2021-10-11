@@ -77,7 +77,7 @@ void insertNode(listNode **pHead, int index, int number)
 }
 
 void deleteNode(listNode **ptrHead, int index){
-    listNode *cur, *newNode;
+    listNode *cur;
     if(index == 0){
         cur = *ptrHead;
         *ptrHead = cur->next;
@@ -86,7 +86,7 @@ void deleteNode(listNode **ptrHead, int index){
     {
         cur = findNode(*ptrHead, index - 1);
         if (cur != NULL){
-            cur->next = findNode(*ptrHead, index +1);;
+            cur->next = (cur->next)->next;
         }else
         {
             printf("khong the xoa");
