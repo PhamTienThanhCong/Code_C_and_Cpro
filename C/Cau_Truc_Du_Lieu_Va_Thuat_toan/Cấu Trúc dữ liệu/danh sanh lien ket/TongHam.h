@@ -29,7 +29,7 @@ void printList(ListNode *head)
     {
         while (cur != NULL)
         {
-            printf("%d\n", cur->num);
+            printf("%d ", cur->num);
             cur = cur->next;
         }
     }
