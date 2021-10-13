@@ -14,15 +14,15 @@ typedef struct _queue
 }queue;
 
 void enqueue(queue *q, int value){
-    insertNode(&(q->ll.head),0,value);
+    insertNode(&(q->ll.head),(q->ll.size),value);
     q->ll.size++;
 }
 
 int dequeue(queue *q){
     int value;
     if (isEmptyQueue(q)){
-        value = findNode(q->ll.head,(q->ll.size-1))->mun;
-        deleteNode(&(q->ll.head),(q->ll.size-1));
+        value = findNode(q->ll.head,0)->mun;
+        deleteNode(&(q->ll.head),0);
         q->ll.size = q->ll.size - 1;
         return value;
     }
@@ -32,7 +32,7 @@ int dequeue(queue *q){
 int peek(queue *q){
     int value;
     if (isEmptyQueue(q)){
-        value = findNode(q->ll.head,(q->ll.size-1))->mun;
+        value = findNode(q->ll.head,0)->mun;
         return value;
     }
     printf("undefine !");
