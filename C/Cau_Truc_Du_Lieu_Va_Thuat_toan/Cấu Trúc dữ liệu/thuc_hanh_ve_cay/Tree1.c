@@ -12,8 +12,8 @@ void TreeTraversal_PreOrder(BTNode *cur)
     if (cur == NULL)
         return;
     printf("%d ", cur->item);
-    TreeTraversal_PreOrder(cur->left);  
-    TreeTraversal_PreOrder(cur->right); 
+    TreeTraversal_PreOrder(cur->left);
+    TreeTraversal_PreOrder(cur->right);
 }
 void TreeTraversal_InOrder(BTNode *cur)
 {
@@ -21,14 +21,14 @@ void TreeTraversal_InOrder(BTNode *cur)
         return;
     TreeTraversal_InOrder(cur->left);
     printf("%d ", cur->item);
-    TreeTraversal_InOrder(cur->right); 
+    TreeTraversal_InOrder(cur->right);
 }
 void TreeTraversal_PostOrder(BTNode *cur)
 {
     if (cur == NULL)
         return;
-    TreeTraversal_PostOrder(cur->left); 
-    TreeTraversal_PostOrder(cur->right); 
+    TreeTraversal_PostOrder(cur->left);
+    TreeTraversal_PostOrder(cur->right);
     printf("%d ", cur->item);
 }
 int main(void)
