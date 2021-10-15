@@ -36,11 +36,9 @@ int findTree(tree *root, int value){
         return 1;
     }
     if (root->value < value){
-        printf("%d\n",root->value);
         return findTree(root->rightTree, value);
     }
     else if (root->value > value){
-        printf("%d\n",root->value);
         return findTree(root->leftTree, value);
     }
 }
