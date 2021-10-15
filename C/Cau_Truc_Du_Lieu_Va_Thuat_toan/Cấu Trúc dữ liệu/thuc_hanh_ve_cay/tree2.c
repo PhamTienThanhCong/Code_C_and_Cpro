@@ -8,20 +8,40 @@ typedef struct _Tree
     struct _Tree *rightTree;
 } tree;
 
-void insertTree(tree **root, int value)
+tree *insertTree(tree *root, int value)
 {
-    tree *r = *root;
-    if (*root == NULL)
+    if (root == NULL)
     {
         tree *r;
         r = malloc(sizeof(tree));
         r->value = value;
         r->leftTree = NULL;
         r->rightTree = NULL;
-        *root = r;
+        return r;
     }
-    else if((r->leftTree)->value > value){
-        insertTree(r->leftTree);
+    if ( root->value > value ){
+        root->leftTree = insertTree( root->leftTree, value );
+    }
+    else if ( root->value < value ) {
+        root->rightTree = insertTree( root->rightTree, value );
+    }
+    return root;
+}
+
+int findTree(tree *root, int value){
+    if(root == NULL){
+        return 0;
+    }
+    if(root->value == value){
+        return 1;
+    }
+    if (root->value < value){
+        printf("%d\n",root->value);
+        return findTree(root->rightTree, value);
+    }
+    else if (root->value > value){
+        printf("%d\n",root->value);
+        return findTree(root->leftTree, value);
     }
 }
 
@@ -29,10 +49,11 @@ int main()
 {
     tree *root;
     root = malloc(sizeof(tree));
-    // root->value = 0;
-    // root->leftTree = NULL;
-    // root->rightTree = NULL;
     root = NULL;
-    insertTree(&root, 3);
-    printf("%d", root->value);
+    root = insertTree(root, 3);
+    root = insertTree(root, 2);
+    root = insertTree(root, 4);
+    root = insertTree(root, 6);
+    root = insertTree(root, 1);
+    printf("%d", findTree(root,1));
 }
