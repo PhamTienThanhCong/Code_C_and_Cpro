@@ -16,10 +16,8 @@ void QuickSort(int a[], int left, int right)
                     a[left] = a[right];
                     left++;
                     check = 0;
-                    // printf(" \n");
                 }
                 else if(pointValue < a[right]){
-                    // printf("%d ",a[right]);
                     right--;
                 }
             }
@@ -30,10 +28,8 @@ void QuickSort(int a[], int left, int right)
                     a[right] = a[left];
                     right--;
                     check = 0;
-                    // printf(" \n");
                 }
                 else if(pointValue > a[left]){
-                    // printf("%d ",a[left]);
                     left++;
                 }
             }
@@ -47,8 +43,8 @@ void QuickSort(int a[], int left, int right)
 
 int main()
 {
-    int a[] = {2, 1, 5, 4, 7, 9, 3};
-    int n = 7;
+    int a[12] = {0, 42, 23, 74, 11, 65, 58, 94, 36, 99, 87, 30000};
+    int n = 12;
     QuickSort(a,0,n-1);
     for(int i=0; i<n; i++){
         printf("%d ",a[i]);
