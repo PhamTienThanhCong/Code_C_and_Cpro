@@ -28,7 +28,7 @@ int QuickSort(int K[], int LB, int UB)
 
 void print_array(int k[], int n) {
 	int i;
-	for (i = 0; i < n; i++) {
+	for (i = 1; i < n; i++) {
 		printf("%d ", k[i]);
 	}
 }
@@ -37,8 +37,8 @@ int main(void) {
 	int K[12]={0,42,23,74,11,65,58,94,36,99,87,30000};
 	printf("\nMang truoc khi sap xep: ");
 	print_array(K, 11);
-	QuickSort(K,0,10);
-	printf("\nMang sau khi sap xep: ");
+	QuickSort(K,1,10);
+	printf("\nMang sau khi sap xep:   ");
 	print_array(K,11);
 	return 0;
 }
