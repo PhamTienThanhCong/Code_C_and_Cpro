@@ -24,7 +24,7 @@ void HeapSort(int K[], int n) {
         int tmp = K[1];
         K[1] = K[i+1] ;
         K[i+1] = tmp;
-    ADJUST(K, 1, i );
+        ADJUST(K, 1, i );
     }
 }
 

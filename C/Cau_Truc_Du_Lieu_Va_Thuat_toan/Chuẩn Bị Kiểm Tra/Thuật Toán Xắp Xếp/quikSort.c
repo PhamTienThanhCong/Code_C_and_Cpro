@@ -4,13 +4,13 @@
 int Part(int K[], int LB, int UB)
 {
     int i, m;
-    i = LB + 1;
+    i = LB;
     int j = UB;
     while (i < j)
     {
-        while (K[i] < K[LB])
+        while (K[i] < K[UB])
             i = i + 1;
-        while (K[j] > K[LB])
+        while (K[j] > K[UB])
             j = j - 1;
         if (i < j)
         {
@@ -21,10 +21,10 @@ int Part(int K[], int LB, int UB)
             j = j - 1;
         }
     }
-    if (K[LB] > K[j])
+    if (K[UB] > K[j])
     {
-        m = K[LB];
-        K[LB] = K[j];
+        m = K[UB];
+        K[UB] = K[j];
         K[j] = m;
     }
     return j;

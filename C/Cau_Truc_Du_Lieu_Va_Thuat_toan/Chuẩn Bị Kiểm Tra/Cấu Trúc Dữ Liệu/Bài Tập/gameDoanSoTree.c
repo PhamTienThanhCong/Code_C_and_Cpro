@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "lishNode.h"
+// #include "lishNode.h"
 
 typedef struct _btnode
 {
@@ -34,13 +34,13 @@ void main()
     cur = &root;
     do
     {
-printf("is it %d?\n", cur->item);
-scanf("%d", &i);
-if (i == -1)
-    cur = cur->left;
-else if (i == 1)
-    cur = cur->right;
-    } while (i != 0 && cur != NULL);
-    if (i == 0)
-        printf("I guess it ! %d\n", cur->item);
+    printf("is it %d?\n", cur->item);
+    scanf("%d", &i);
+    if (i == -1)
+        cur = cur->left;
+    else if (i == 1)
+        cur = cur->right;
+        } while (i != 0 && cur != NULL);
+        if (i == 0)
+            printf("I guess it ! %d\n", cur->item);
 }
