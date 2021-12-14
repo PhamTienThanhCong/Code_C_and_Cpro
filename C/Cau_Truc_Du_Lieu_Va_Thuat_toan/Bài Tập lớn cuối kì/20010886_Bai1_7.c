@@ -45,10 +45,10 @@ int main(void) {
         scanf("%d",K+i);
     }
 	printf("\nMang truoc khi sap xep: ");
-	print_array(K, 10);
-	QuickSort(K,1,10);
+	print_array(K, n);
+	QuickSort(K,1,n);
 	printf("\nMang sau khi sap xep:   ");
-	print_array(K,10);
+	print_array(K,n);
 	return 0;
 }
 // This is the code of Pham Tien Thanh Cong - 20010886
