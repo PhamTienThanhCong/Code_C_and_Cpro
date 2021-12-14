@@ -17,6 +17,7 @@
         "utility": "c",
         "variant": "c",
         "listnodefunction.h": "c",
-        "lishnode.h": "c"
+        "lishnode.h": "c",
+        "stdio.h": "c"
     }
 }
