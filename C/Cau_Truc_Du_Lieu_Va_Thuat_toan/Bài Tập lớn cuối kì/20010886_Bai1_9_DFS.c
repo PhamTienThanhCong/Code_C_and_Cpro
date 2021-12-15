@@ -33,7 +33,7 @@ void DepthFirstSearch(int v){
 	}	
 }
 
-
+// This is the code of Pham Tien Thanh Cong - 20010886
 int main(){	
 	readData("20010886_Bai1_9_DFS.txt", G, &n, &source);
 	int i;
@@ -41,4 +41,4 @@ int main(){
 		visited[i] = 0;
 	DepthFirstSearch(source);
 }
-
+// This is the code of Pham Tien Thanh Cong - 20010886

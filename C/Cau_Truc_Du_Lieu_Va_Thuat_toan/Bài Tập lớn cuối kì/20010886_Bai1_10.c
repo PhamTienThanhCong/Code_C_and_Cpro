@@ -77,12 +77,12 @@ void dijkstra(int G[MAX][MAX], int n, int source){
 		
 }
 
+// This is the code of Pham Tien Thanh Cong - 20010886
 int main(){
 	int G[MAX][MAX], n, source;
 	
 	readData("20010886_Bai1_10.txt", G, &n, &source);
 	
 	dijkstra(G, n, source);
-	
 }
-
+// This is the code of Pham Tien Thanh Cong - 20010886

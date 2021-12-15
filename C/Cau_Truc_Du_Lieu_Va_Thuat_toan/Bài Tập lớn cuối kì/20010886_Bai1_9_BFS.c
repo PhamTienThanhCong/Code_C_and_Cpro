@@ -178,6 +178,7 @@ void BFS_Path(int G[MAX][MAX], int n, int startN, int endN){
 	}
 }
 
+// This is the code of Pham Tien Thanh Cong - 20010886
 int main(){
 	int G[MAX][MAX], n, source;
 	readData(G, &n, &source); 
@@ -188,3 +189,4 @@ int main(){
 	printf("\nBFS_Path: ");
 	BFS_Path(G, n , source, 2);
 }
+// This is the code of Pham Tien Thanh Cong - 20010886

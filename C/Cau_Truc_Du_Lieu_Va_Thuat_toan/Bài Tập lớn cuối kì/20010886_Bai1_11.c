@@ -71,6 +71,7 @@ void bellmanFord(struct Graph *g, int source){
 		}
 }
 
+// This is the code of Pham Tien Thanh Cong - 20010886
 int main(){
 	struct Graph *g = (struct Graph*)malloc(sizeof(struct Graph));
 	int source;
@@ -78,5 +79,5 @@ int main(){
 	printf("\nBellmanFord: ");
 	readData("Bai1_11.txt", g, &source);
 	bellmanFord(g,source);
-	
 }
+// This is the code of Pham Tien Thanh Cong - 20010886
