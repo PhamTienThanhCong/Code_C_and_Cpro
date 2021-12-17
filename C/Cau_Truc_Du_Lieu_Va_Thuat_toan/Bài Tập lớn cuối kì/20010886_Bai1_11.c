@@ -77,7 +77,7 @@ int main(){
 	int source;
 	
 	printf("\nBellmanFord: ");
-	readData("Bai1_11.txt", g, &source);
+	readData("20010886_Bai1_11.txt", g, &source);
 	bellmanFord(g,source);
 }
 // This is the code of Pham Tien Thanh Cong - 20010886

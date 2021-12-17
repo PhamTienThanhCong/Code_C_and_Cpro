@@ -151,22 +151,61 @@ void QLSV_save_file(QLSV sinhvien[]){
 
         gcvt(sinhvien[i].DiemTL, 2, data);
         fputs(data, out_file);
-        fputs(",\n", out_file);
+        fputs("\n", out_file);
     }
     fclose(out_file);
+}
+
+void QLSV_read_data(){
+        FILE* fp = fopen("sv.dat", "r");
+        char buffer[123];
+        QLSV sv[1000];
+        int i = 0;
+        int temp = SoLuongSV;
+        while (fgets(buffer,1024, fp)) {
+            char* value = strtok(buffer, ", ");
+            int j=1;
+            while (value) {
+                if (j==1){
+                    strcpy(sv[i].maSv,value);
+                }
+                if (j==2){
+                    strcpy(sv[i].HoTenSv,value);
+                }
+                if (j==3){
+                    sv[i].DiemTB = atof(value);
+                }
+                if (j==4){
+                    sv[i].DiemRL = atof(value);
+                }
+                if (j==5){
+                    sv[i].DiemTL = atof(value);
+                }
+                value = strtok(NULL, ", ");
+                j++;
+            }
+            i++;
+            printf("\n");
+        }
+        SoLuongSV = i;
+        QLSV_In_Thong_Tin(sv);
+        SoLuongSV = temp;
+        // Close the file
+        fclose(fp);
 }
 
 int main(){
     
     QLSV_Nhap_Ds(sinhVien);
     QLSV_Tinh_Diem_Tich_Luy(sinhVien);
-    // QLSV_Xap_Xep_Diem_Ren_Luyen(sinhVien);
-    // QLSV_In_Thong_Tin(sinhVien);
-    // QLSV_Sinh_Vien_Diem_Tich_Luy_Cao_Nhat(sinhVien);
-    // QLSV_Them_Sv_Moi(sinhVien);
-    // QLSV_Xap_Xep_Diem_Ren_Luyen(sinhVien);
-    // QLSV_In_Thong_Tin(sinhVien);
-    // QLSV_Xoa_Sinh_Vien(sinhVien);
+    QLSV_Xap_Xep_Diem_Ren_Luyen(sinhVien);
+    QLSV_In_Thong_Tin(sinhVien);
+    QLSV_Sinh_Vien_Diem_Tich_Luy_Cao_Nhat(sinhVien);
+    QLSV_Them_Sv_Moi(sinhVien);
+    QLSV_Xap_Xep_Diem_Ren_Luyen(sinhVien);
+    QLSV_In_Thong_Tin(sinhVien);
+    QLSV_Xoa_Sinh_Vien(sinhVien);
     QLSV_In_Thong_Tin(sinhVien);
     QLSV_save_file(sinhVien);
+    QLSV_read_data();
 }
