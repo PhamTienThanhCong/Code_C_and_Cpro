@@ -43,11 +43,10 @@ void QLSV_Nhap_Ds(QLSV sinhvien[]){
 }
 
 void QLSV_Tinh_Diem_Tich_Luy(QLSV sinhvien[]){
-    // printf("\n\t2. TINH DIEM TICH LUY CUA SINH VIEN\n");
+    
     for(int i=0; i< SoLuongSV; i++){
         sinhvien[i].DiemTL = (sinhvien[i].DiemTB + sinhvien[i].DiemRL)/2;
     }
-    // printf("----------Tinh Diem Hoan Tat----------\n");
 }
 
 void QLSV_In_Thong_Tin(QLSV sinhvien[]){
@@ -60,7 +59,6 @@ void QLSV_In_Thong_Tin(QLSV sinhvien[]){
 }
 
 void QLSV_Xap_Xep_Diem_Ren_Luyen(QLSV sinhvien[]){
-    // printf("\n\t4. XAP XEP SINH VIEN THEO DIEM REN LUYEN TANG DAN:\n");
     for (int i = 0; i < SoLuongSV; i++ ){
         for (int j = i+1; j < SoLuongSV; j++ ){
             if (sinhvien[i].DiemRL > sinhvien[j].DiemRL){
@@ -88,6 +86,8 @@ void QLSV_Sinh_Vien_Diem_Tich_Luy_Cao_Nhat(QLSV sinhvien[]){
 
 void QLSV_Them_Sv_Moi(QLSV sinhvien[]){
     printf("\n\t5. NHAP THONG TIN SINH VIEN MOI\n");
+    char c;
+    scanf("%c",c);
     int i = SoLuongSV;
     SoLuongSV++;
     printf("- Nhap Ma Sinh Vien: ");
@@ -157,6 +157,7 @@ void QLSV_save_file(QLSV sinhvien[]){
 }
 
 void QLSV_read_data(){
+        printf("\n\t9. DOC DU LIEU TU FILE sv.dat:\n");
         FILE* fp = fopen("sv.dat", "r");
         char buffer[123];
         QLSV sv[1000];
@@ -195,17 +196,48 @@ void QLSV_read_data(){
 }
 
 int main(){
-    
-    QLSV_Nhap_Ds(sinhVien);
-    QLSV_Tinh_Diem_Tich_Luy(sinhVien);
-    QLSV_Xap_Xep_Diem_Ren_Luyen(sinhVien);
-    QLSV_In_Thong_Tin(sinhVien);
-    QLSV_Sinh_Vien_Diem_Tich_Luy_Cao_Nhat(sinhVien);
-    QLSV_Them_Sv_Moi(sinhVien);
-    QLSV_Xap_Xep_Diem_Ren_Luyen(sinhVien);
-    QLSV_In_Thong_Tin(sinhVien);
-    QLSV_Xoa_Sinh_Vien(sinhVien);
-    QLSV_In_Thong_Tin(sinhVien);
-    QLSV_save_file(sinhVien);
-    QLSV_read_data();
+    int c = 0;
+    while (c == 0){
+        system("cls");
+        printf("\tCHUONG TRINH QUAN LY SINH VIEN:\t\n");
+        printf("1. Nhap danh sach sinh vien\n");
+        printf("2. Tinh diem tich luy cua sinh vien\n");
+        printf("3. In danh sach sinh vien\n");
+        printf("4. Xap xep danh sach sinh vien theo diem ren luyen\n");
+        printf("5. In sinh vien co diem tich luy cao nhat\n");
+        printf("6. Them 1 sinh vien\n");
+        printf("7. Xoa sinh vien co diem trung binh thap hon hs\n");
+        printf("8. In sinh vien ra file sv.dat\n");
+        printf("9. Doc va in du lieu sv tu file sv.dat\n");
+        printf("Moi ban chon chuc nang: ");
+        scanf("%d", &c);
+        if(c == 1){
+            QLSV_Nhap_Ds(sinhVien);
+        }else if(c == 2){
+            printf("\n\t2. TINH DIEM TICH LUY CUA SINH VIEN\n");
+            QLSV_Tinh_Diem_Tich_Luy(sinhVien);
+            printf("\t----------Tinh Diem Hoan Tat----------\n");
+        }else if(c == 3){
+            QLSV_In_Thong_Tin(sinhVien);
+        }else if(c == 4){
+            printf("\n\t4. XAP XEP SINH VIEN THEO DIEM REN LUYEN TANG DAN:\n");
+            QLSV_Xap_Xep_Diem_Ren_Luyen(sinhVien);
+            printf("\t-----------Xap xep Hoan Tat----------\n");
+        }
+        else if(c == 5){
+            QLSV_Sinh_Vien_Diem_Tich_Luy_Cao_Nhat(sinhVien);
+        }else if(c == 6){
+            QLSV_Them_Sv_Moi(sinhVien);
+        }else if(c == 7){
+            QLSV_Xoa_Sinh_Vien(sinhVien);
+            printf("\t-----------Xoa Hoan Tat----------\n");
+        }else if(c == 8){
+            QLSV_save_file(sinhVien);
+            printf("\t-----------luu fil Hoan Tat----------\n");
+        }else if(c == 9){
+            QLSV_read_data();    
+        }
+        printf("Nhap 0 De Tiep Tuc: ");
+        scanf("%d", &c);
+    }    
 }
