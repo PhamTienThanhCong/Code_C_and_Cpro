@@ -133,16 +133,40 @@ void QLSV_Xoa_Sinh_Vien(QLSV sinhvien[]){
     }
 }
 
+void QLSV_save_file(QLSV sinhvien[]){
+    FILE *out_file = fopen("sv.dat", "w");
+    for (int i=0;i<SoLuongSV;i++){
+        fputs(sinhvien[i].maSv, out_file);
+        fputs(",", out_file);
+        fputs(sinhvien[i].HoTenSv, out_file);
+        fputs(",", out_file);
+        char data[6];
+        gcvt(sinhvien[i].DiemTB, 2, data);
+        fputs(data , out_file);
+        fputs(",", out_file);
+
+        gcvt(sinhvien[i].DiemRL, 2, data);
+        fputs(data, out_file);
+        fputs(",", out_file);
+
+        gcvt(sinhvien[i].DiemTL, 2, data);
+        fputs(data, out_file);
+        fputs(",\n", out_file);
+    }
+    fclose(out_file);
+}
+
 int main(){
     
     QLSV_Nhap_Ds(sinhVien);
     QLSV_Tinh_Diem_Tich_Luy(sinhVien);
-    QLSV_Xap_Xep_Diem_Ren_Luyen(sinhVien);
+    // QLSV_Xap_Xep_Diem_Ren_Luyen(sinhVien);
+    // QLSV_In_Thong_Tin(sinhVien);
+    // QLSV_Sinh_Vien_Diem_Tich_Luy_Cao_Nhat(sinhVien);
+    // QLSV_Them_Sv_Moi(sinhVien);
+    // QLSV_Xap_Xep_Diem_Ren_Luyen(sinhVien);
+    // QLSV_In_Thong_Tin(sinhVien);
+    // QLSV_Xoa_Sinh_Vien(sinhVien);
     QLSV_In_Thong_Tin(sinhVien);
-    QLSV_Sinh_Vien_Diem_Tich_Luy_Cao_Nhat(sinhVien);
-    QLSV_Them_Sv_Moi(sinhVien);
-    QLSV_Xap_Xep_Diem_Ren_Luyen(sinhVien);
-    QLSV_In_Thong_Tin(sinhVien);
-    QLSV_Xoa_Sinh_Vien(sinhVien);
-    QLSV_In_Thong_Tin(sinhVien);
+    QLSV_save_file(sinhVien);
 }
