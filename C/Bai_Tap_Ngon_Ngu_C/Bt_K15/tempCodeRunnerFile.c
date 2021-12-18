@@ -1,0 +1,2 @@
+
+    printHeapSort(n,K); 
