@@ -1,7 +1,8 @@
 // code of duc minh
-# include <stdio.h>
+# include <bits/stdc++.h>
 # include <string.h>
-# include <stdlib.h>
+
+using namespace std;
 
 typedef struct QuanLySinhVien{
     char maSv[10];
@@ -19,7 +20,7 @@ void QLSV_Nhap_Ds(QLSV sinhvien[]){
     char c;
     printf("\n\t1. NHAP THONG TIN SINH VIEN\n");
     printf("Nhap So Luong Sinh Vien: ");
-    scanf("%d",&SoLuongSV);
+    cin >> SoLuongSV;
     scanf("%c",&c);
     for (int i=0; i< SoLuongSV; i++){
         printf("\n** Nhap thong tin sinh vien thu %d: **\n",i+1);
@@ -34,9 +35,20 @@ void QLSV_Nhap_Ds(QLSV sinhvien[]){
 
         printf("- Nhap Diem trung binh: ");
         scanf("%f", &sinhvien[i].DiemTB);
+        while(sinhvien[i].DiemTB < 0 || sinhvien[i].DiemTB > 10){
+            printf("- Diem Tb nhap sai chi thuoc pham vi 0 -> 10\n");
+            printf("- Nhap Lai Diem trung binh: ");
+            scanf("%f", &sinhvien[i].DiemTB);
+        }
 
         printf("- Nhap Diem Ren Luyen: ");
         scanf("%f", &sinhvien[i].DiemRL);
+        while(sinhvien[i].DiemRL < 0 || sinhvien[i].DiemRL > 10){
+            printf("- Diem Rl nhap sai chi thuoc pham vi 0 -> 10\n");
+            printf("- Nhap Lai Diem ren luyen: ");
+            scanf("%f", &sinhvien[i].DiemRL);
+        }
+
         scanf("%c",&c);
     }
     printf("----------Nhap Thong Tin Hoan Tat----------\n");
@@ -100,9 +112,19 @@ void QLSV_Them_Sv_Moi(QLSV sinhvien[]){
 
     printf("- Nhap Diem trung binh: ");
     scanf("%f", &sinhvien[i].DiemTB);
+    while(sinhvien[i].DiemTB < 0 || sinhvien[i].DiemTB > 10){
+        printf("- Diem Tb nhap sai chi thuoc pham vi 0 -> 10\n");
+        printf("- Nhap Lai Diem trung binh: ");
+        scanf("%f", &sinhvien[i].DiemTB);
+    }
 
     printf("- Nhap Diem Ren Luyen: ");
     scanf("%f", &sinhvien[i].DiemRL);
+    while(sinhvien[i].DiemRL < 0 || sinhvien[i].DiemRL > 10){
+        printf("- Diem Rl nhap sai chi thuoc pham vi 0 -> 10\n");
+        printf("- Nhap Lai Diem ren luyen: ");
+        scanf("%f", &sinhvien[i].DiemRL);
+    }
     
     QLSV_Tinh_Diem_Tich_Luy(sinhvien);
 }
@@ -210,7 +232,7 @@ int main(){
         printf("8. In sinh vien ra file sv.dat\n");
         printf("9. Doc va in du lieu sv tu file sv.dat\n");
         printf("Moi ban chon chuc nang: ");
-        scanf("%d", &c);
+        cin >> c;
         if(c == 1){
             QLSV_Nhap_Ds(sinhVien);
         }else if(c == 2){
@@ -227,6 +249,8 @@ int main(){
         else if(c == 5){
             QLSV_Sinh_Vien_Diem_Tich_Luy_Cao_Nhat(sinhVien);
         }else if(c == 6){
+            char d;
+            scanf("%c", &d);
             QLSV_Them_Sv_Moi(sinhVien);
         }else if(c == 7){
             QLSV_Xoa_Sinh_Vien(sinhVien);
