@@ -6,6 +6,7 @@ using namespace std;
 
 int main(){ 
     ifstream inFile;
+    ofstream outFile;
     inFile.open("./result.csv");
 
     if (!inFile) {
@@ -25,15 +26,17 @@ int main(){
         }
     }
 
-    if (sumValue != 0){
-        cout << "sum time: " << sumTime << "\n";
-        cout << "sum value: " << sumValue << "\n";
+    outFile.open("./result_out.txt");
 
-        cout << "Trung Binh vlaue: " << sumValue/sum << "\n";
-        cout << "Trung Binh 1 s: " << sumValue/sumTime << "\n";
+    if (sumValue != 0){
+        outFile << "sum time: " << sumTime << "\n";
+        outFile << "sum value: " << sumValue << "\n";
+
+        outFile << "Trung Binh vlaue: " << sumValue/sum << "\n";
+        outFile << "Trung Binh 1 s: " << sumValue/sumTime << "\n";
 
     }else{
-        cout << "Khong phu hop ";
+        outFile << "Khong phu hop ";
     }
 
 }

@@ -1,0 +1,4 @@
+sum time: 480
+sum value: 660
+Trung Binh vlaue: 44
+Trung Binh 1 s: 1.375
