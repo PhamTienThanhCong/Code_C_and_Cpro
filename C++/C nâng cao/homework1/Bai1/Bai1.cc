@@ -8,8 +8,8 @@
 using namespace std;
 
 struct Node{
-    float x = 2;
-    float y = 5;
+    float x;
+    float y;
 };
 
 void sliceString(string str, Node* node) {
