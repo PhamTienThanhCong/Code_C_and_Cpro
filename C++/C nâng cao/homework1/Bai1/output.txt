@@ -1,0 +1,3 @@
+Vi tri diem node: 
+Gan Nhat la: 50 khoang cach 0.414006
+Xa nhat la: 781 khoang cach 121.532
