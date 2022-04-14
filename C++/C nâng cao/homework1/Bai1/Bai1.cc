@@ -61,14 +61,14 @@ int main(int argc, char **argv){
     count = -1;
     int max_index = 0;
     int min_index = 0;
-    if (max_index == nodeID){
-        max_index --;
-        min_index --;
-        if (max_index < 0){
-            max_index = 1;
-            min_index = 1;
-        }
-    }
+    // if (max_index == nodeID){
+    //     max_index --;
+    //     min_index --;
+    //     if (max_index < 0){
+    //         max_index = 1;
+    //         min_index = 1;
+    //     }
+    // }
     float max_value = khoangCach(point.at(max_index) , point.at(nodeID));
     float min_value = khoangCach(point.at(min_index) , point.at(nodeID));
     for (const Node& i : point) {
