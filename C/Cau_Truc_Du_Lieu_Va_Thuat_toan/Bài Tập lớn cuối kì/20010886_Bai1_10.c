@@ -45,15 +45,17 @@ void dijkstra(int G[MAX][MAX], int n, int source){
 	{
 		
 		mindistance = INFINITY;
-		
+		// tìm w không trong N' mà D(w) nhỏ nhất
 		for(i=0; i<n; i++)
 			if(d[i] < mindistance && visited[i] == 0){
 				mindistance = d[i];
 				nextnode = i;
 			}
 			
+		// thêm w vào N' 
 		visited[nextnode] = 1;
 		
+		// cập nhật D(v) cho mọi v kề với w và không trong N' :
 		for(i=0; i<n; i++)
 			if(visited[i] == 0)
 				if(d[i] > mindistance + c[nextnode][i]){
